@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.message.MessageFragment">
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                android:id="@+id/circularRevealCardView"
+                android:layout_width="411dp"
+                android:layout_height="662dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="70dp">
+
+                <ListView
+                    android:id="@+id/lwTrusteesList"
+                    android:layout_width="376dp"
+                    android:layout_height="619dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp">
+
+                </ListView>
+
+                <Button
+                    android:id="@+id/btnMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:enabled="false"
+                    android:text="Message"
+
+                    />
+
+            </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                android:layout_width="411dp"
+                android:layout_height="662dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="40dp"
+                >
+
+                <TextView
+                    android:id="@+id/txtMessage1"
+                    android:layout_width="195dp"
+                    android:layout_height="59dp"
+                    android:layout_marginTop="100dp"
+                    android:paddingStart="30dp"
+                    android:paddingTop="10dp"
+                    android:text="Message 1"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:id="@+id/txtTrusteeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:text="TextView"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="bottom"
+                    android:background="#fff"
+                    android:padding="5dp"
+                    >
+
+                    <EditText
+                        android:id="@+id/txtTextContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/btnSend"
+                        android:background="@android:color/transparent"
+                        android:hint="Type a message..." />
+
+                    <ImageButton
+                        android:id="@+id/btnSend"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+
+        </LinearLayout>
+    </ViewFlipper>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
